@@ -1,0 +1,78 @@
+.home-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-app-logo{
+    width: 25%;
+    height: auto;
+    margin-top: 5%;
+}
+
+.homepage-app-logo-text{
+    width: 17%;
+    height: auto;
+    margin-top: 1%;
+}
+
+.homepage-hero-text{
+    width: 25%;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24.3px;
+    font-weight: 400;
+}
+
+.search-container{
+    width: 45%;
+    height: 80px;
+    margin-top: 5%;
+    border-radius: 60px;
+    border: 10px solid #E85382;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0px 4px 4px rgba(0%, 0%, 0%, 0.08);
+}
+
+.search-bar{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 80%;
+    height: 100%;
+    margin-left: 3%;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32.4px;
+}
+
+.search-icon-container{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    color: 'white';
+    background-color: #E85382;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1%;
+    box-shadow: 0px 4px 4px rgba(0%, 0%, 0%, 0.15);
+}
+
+.homepage-search-icon{
+    width: 40%;
+    height: auto;
+}
+
+.view-all-link{
+    margin-top: 2%;
+    color: #0D131A;    ;
+    font-size: 18px;
+    line-height: 24.3px;
+}
