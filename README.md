@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# Enyata Frontend Assesment Submission
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app is a submission for the Enyata Frontend Engineer technical assesment.
 
-Currently, two official plugins are available:
+Find the instruction details below:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Requirements](https://www.figma.com/file/EwSQiqGGaUVezxW4jygiwD/Pokebook-App?node-id=91-2&t=5O4h1ks9Rgv1MjmX-0) 
+- [Design](https://www.figma.com/file/EwSQiqGGaUVezxW4jygiwD/Pokebook-App?node-id=0-1&t=DFrcRJlvL18zJ8mX-0)
 
-## Expanding the ESLint configuration
+## Running the app
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To run the app first clone the repository and then follow the steps below:
 
-- Configure the top-level `parserOptions` property like this:
+- `cd pokebook-app`
+- `npm install`
+- `npm run dev`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+The app should be accessible via [http://localhost:5173](http://localhost:5173)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Viewing the deployed app
+
+The app is currently not deployed. The readme would be updated once this changes.
+
+
+Last README.md Update: `05 March 2024`
