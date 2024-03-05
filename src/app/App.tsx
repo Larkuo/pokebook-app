@@ -1,12 +1,10 @@
+import AppNavigation from '../navigation/AppNavigation';
 import './App.css';
-import HomePage from '../pages/HomePage/HomePage';
 
 function App() {
-  return (
-    <>
-      <HomePage />
-    </>
-  )
+    return (
+      <AppNavigation />
+    );
 }
 
 export default App

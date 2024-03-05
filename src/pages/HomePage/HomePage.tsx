@@ -2,8 +2,9 @@ import './HomePage.css';
 import AppLogo from '../../assets/pokebook-logo.svg';
 import AppLogoText from '../../assets/pokebook-logo-text.svg';
 import SearchIcon from '../../assets/search-icon.svg';
+import { Link } from 'react-router-dom';
 
-export default function HomePage() {
+export function HomePage() {
     return (
         <div className='home-page'>
             <img 
@@ -32,7 +33,7 @@ export default function HomePage() {
                     />
                 </div>
             </div>
-            <a href='#' className='view-all-link'>View All</a>
+            <Link className='view-all-link' to={'/list'}>View All</Link>
         </div>
     );
 }
