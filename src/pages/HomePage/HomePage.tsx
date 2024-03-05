@@ -33,7 +33,9 @@ export function HomePage() {
                     />
                 </div>
             </div>
-            <Link className='view-all-link' to={'/list'}>View All</Link>
+            <Link className='view-all-link' to={'/list'}>
+                View All
+            </Link>
         </div>
     );
 }

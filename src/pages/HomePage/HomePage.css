@@ -76,3 +76,34 @@
     font-size: 18px;
     line-height: 24.3px;
 }
+
+@media(max-width: 768px) {
+    .homepage-app-logo{
+        width: 65%;
+        margin-top: 15%;
+    }
+
+    .homepage-app-logo-text{
+        width: 35%;
+        margin-top: 2%;
+    }
+
+    .homepage-hero-text{
+        width: 70%;
+    }
+
+    .search-container{
+        width: 80%;
+        height: 80px;
+        margin-top: 10%;
+        border: 7px solid #E85382;
+    }
+
+    .search-bar{
+        font-size: 18px;
+    }
+
+    .view-all-link{
+        margin-top: 5%;
+    }
+}
