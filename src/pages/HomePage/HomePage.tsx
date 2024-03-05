@@ -1,10 +1,14 @@
 import './HomePage.css';
 import AppLogo from '../../assets/pokebook-logo.svg';
 import AppLogoText from '../../assets/pokebook-logo-text.svg';
-import SearchIcon from '../../assets/search-icon.svg';
+import SearchIcon from '../../assets/search-icon-white.svg';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { ThemePickerModal } from '../../components';
 
 export function HomePage() {
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <div className='home-page'>
             <img 
@@ -36,6 +40,15 @@ export function HomePage() {
             <Link className='view-all-link' to={'/list'}>
                 View All
             </Link>
+            <button onClick={() => setShowModal(!showModal)}>
+                temp button for theme
+            </button>
+            {showModal && 
+                <ThemePickerModal
+                    closeModal={() => setShowModal(false)}
+                    selectTheme={(theme: string) => {console.log({theme})}}
+                />
+            }
         </div>
     );
 }
