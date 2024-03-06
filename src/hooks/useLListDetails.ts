@@ -19,7 +19,6 @@ export function useListDetails(
 
     function search(value: string){
         setSearchValue(value);
-        console.log('search list for name: ', searchValue);
     } 
 
     async function getPokemonList(){

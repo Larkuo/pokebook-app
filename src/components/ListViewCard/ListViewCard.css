@@ -1,0 +1,86 @@
+.list-view-card{
+    width: 23%;
+    min-height: 45vh;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 40px 0px #0000000F;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    margin-bottom: 15vh;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-card-sprite-container{
+    width: 92%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+}
+
+.list-card-sprite{
+    width: 80%;
+    max-height: 130%;
+    margin-top: -35%;
+}
+
+.list-view-name{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    width: 92%;
+}
+
+.list-card-types-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.list-card-type{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #EEEEEE; 
+    border-radius: 20px; 
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.type-margin{
+    margin-right: 3%;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .list-view-card{
+        width: 40%;
+        padding-top: 1.5%;
+        padding-bottom: 5%;
+        height: 30vh;
+        margin-right: 1.5%;
+        margin-left: 1.5%;
+    }
+}
+
+@media (max-width: 499px) {
+    .list-view-card{
+        width: 95%;
+        height: 35vh;
+        padding-top: 3%;
+        padding-bottom: 5%;
+    }
+}

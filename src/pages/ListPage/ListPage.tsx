@@ -35,6 +35,7 @@ export function ListPage() {
                         key={`${index} - ${value.name}`}
                         name={value.name}
                         url={value.url}
+                        theme={theme}
                     />
                 )}
             </div>

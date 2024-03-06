@@ -1,6 +1,5 @@
 import './AppHeader.css';
 import AppLogo from '../../assets/pokebook-logo.svg';
-import { useState } from 'react';
 import { AppThemeType, colors } from '../../theme/theme';
 import { Link } from 'react-router-dom';
 import { ThemePickerModal } from '..';
