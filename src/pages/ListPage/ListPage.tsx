@@ -1,20 +1,24 @@
 import { useParams } from 'react-router-dom';
-import { AppHeader } from '../../components';
+import { AppHeader, ListViewCard } from '../../components';
 import './ListPage.css';
 import { useContext, useState } from 'react';
 import { ThemeContext } from '../../theme/ThemeContext';
+import { useListDetails } from '../../hooks/useLListDetails';
 
 export function ListPage() {
     const { searchTerm } = useParams();
     const { theme } = useContext(ThemeContext);
 
-    const [searchValue, setSearchValue] = useState(searchTerm || '');
     const [showThemeModal, setShowThemeModal] = useState(false);
 
-    function search(value: string){
-        setSearchValue(value);
-        console.log('search list for name: ', searchValue);
-    }
+    const [searchLimit, setSearchLimit] = useState(8);
+    const [searchOffset, setSearchOffset] = useState(0);
+
+    const {
+        searchValue,
+        search,
+        pokemonList,
+    } = useListDetails(searchLimit, searchOffset, searchTerm);
 
     return (
         <div className='list-view-page'>
@@ -26,7 +30,13 @@ export function ListPage() {
                 setShowThemeModal={setShowThemeModal}
             />
             <div className='list-page-content'>
-                List View Page
+                {pokemonList.map((value, index) => 
+                    <ListViewCard
+                        key={`${index} - ${value.name}`}
+                        name={value.name}
+                        url={value.url}
+                    />
+                )}
             </div>
         </div>
     );
