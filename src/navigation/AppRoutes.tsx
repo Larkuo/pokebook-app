@@ -28,7 +28,7 @@ export const APP_ROUTES: AppRoutesInterface[] = [
     },
     {
         key: 3,
-        path: "/list/:pokemonName",
+        path: "/list/:searchTerm",
         element: <ListPage />
     },
 ];

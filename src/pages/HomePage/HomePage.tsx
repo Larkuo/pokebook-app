@@ -1,17 +1,20 @@
 import './HomePage.css';
 import AppLogo from '../../assets/pokebook-logo.svg';
-import AppLogoText from '../../assets/pokebook-logo-text.svg';
 import SearchIcon from '../../assets/search-icon-white.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
-import { ThemePickerModal } from '../../components';
 import { ThemeContext } from '../../theme/ThemeContext';
 import { colors } from '../../theme/theme';
 
 export function HomePage() {
     const { theme } = useContext(ThemeContext);
+    const navigate = useNavigate();
 
-    const [showModal, setShowModal] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
+
+    function search(){
+        navigate(`list/${searchTerm}`);
+    }
 
     return (
         <div className='home-page'>
@@ -33,27 +36,23 @@ export function HomePage() {
                 <input
                     className='search-bar'
                     placeholder='Enter pokemon name'
+                    onChange={(event) => setSearchTerm(event.target.value)}
                 />
-                <div 
+                <button 
                     className='search-icon-container'
                     style={{backgroundColor: colors[theme]}}
-                    onClick={() => setShowModal(!showModal)}
+                    onClick={search}
                 >
                     <img 
                         src={SearchIcon}
                         className='homepage-search-icon'
                         alt='search-icon'
                     />
-                </div>
+                </button>
             </div>
             <Link className='view-all-link' to={'/list'}>
                 View All
             </Link>
-            {showModal && 
-                <ThemePickerModal
-                    closeModal={() => setShowModal(false)}
-                />
-            }
         </div>
     );
 }
