@@ -43,9 +43,6 @@ export function ListViewCard({
             className='list-view-card'
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            // style={{
-            //     position: hover? 'absolute' : '',
-            // }}
         >
             <div className='list-card-sprite-container'>
                 <img

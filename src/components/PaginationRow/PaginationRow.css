@@ -1,0 +1,119 @@
+.pagination-row{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pagination-button-container{
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.pagination-button{
+    padding: 0;
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.chevron-icon{
+    height: 40%;
+    width: auto;
+}
+
+.ellipses-icon{
+    width: 5%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.pagination-limit-dropdown{
+    min-width: 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.pagination-limit-container{
+    width: 6vw;
+    height: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E1E1E1;
+    padding-left: 7%;
+    padding-right: 7%;
+    border-radius: 5px;
+}
+
+.pagination-limit{
+    height: 75%;
+    aspect-ratio: 1 / 1;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.pagination-limit-button{
+    outline: none;
+    padding: none;
+    border: none;
+    background-color: transparent;
+}
+
+.limit-dropdown-list{
+    width: 8vw;
+    height: 15vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 1vh;
+    border-radius: 5px;
+}
+
+.limit-dropdown-item{
+    width: 100%;
+    height: 2vw;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.limit-dropdown-item:hover{
+    background-color: #E1E1E1;
+}
