@@ -10,6 +10,7 @@
     padding-top: 12vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .list-card-container{

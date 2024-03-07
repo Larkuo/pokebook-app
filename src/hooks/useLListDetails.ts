@@ -55,9 +55,8 @@ export function useListDetails(
 
     function search(value: string){
         setSearchValue(value);
-        if(!value){
-            navigate('/list');
-        }
+        navigate(`/list/${value}`);
+        setCurrentPage(1);
     } 
 
     async function getPokemonList(){

@@ -4,6 +4,7 @@ import './ListPage.css';
 import { useContext, useState } from 'react';
 import { ThemeContext } from '../../theme/ThemeContext';
 import { useListDetails } from '../../hooks/useLListDetails';
+import { colors } from '../../theme/theme';
 
 export function ListPage() {
     const { searchTerm } = useParams();
@@ -45,6 +46,12 @@ export function ListPage() {
                         />
                     )}
                 </div>
+                {pokemonList.length < 1 && 
+                    <h2 style={{width: '60%', textAlign: 'center', marginBottom: '5vh'}}>
+                        Sorry, we could not find any pokemon named <span style={{color: colors[theme]}}>{searchValue}</span> or similar.
+                        Try again with another search.
+                    </h2>
+                }
                 <PaginationRow 
                     currentPage={currentPage} 
                     pageCount={pageCount}
