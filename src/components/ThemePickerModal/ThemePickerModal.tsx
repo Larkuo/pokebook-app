@@ -19,7 +19,7 @@ export function ThemePickerModal({
                     <span className='theme-modal-header-text'>Choose Theme</span>
                 </div>
                 <div className='theme-modal-body'>
-                    {THEME_SELECTOR_DATA.map((value: ThemeSelectoryProps, index: number) => ( 
+                    {THEME_SELECTOR_DATA.map((value: ThemeSelectoryProps) => ( 
                         <div 
                             key={value.id} 
                             className={theme === value.theme? 'theme-selector-circle-active' : 'theme-selector-circle'}

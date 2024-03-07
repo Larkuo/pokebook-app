@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useListItemDetails } from '../../hooks/useListItemDetails';
+import { PokemonDetailsInterface, useListItemDetails } from '../../hooks/useListItemDetails';
 import { AppThemeType, colors } from '../../theme/theme';
 import EyeIcon from '../../assets/eye-icon.svg';
 
@@ -9,31 +9,33 @@ interface ListViewCardProps{
     name: string;
     url: string;
     theme: AppThemeType;
+    viewPokemon: (pokemon: PokemonDetailsInterface) => void;
 }
 
 export function ListViewCard({
     name,
     url,
     theme,
+    viewPokemon
 }:ListViewCardProps) {
     const { pokemonDetails } = useListItemDetails(url);
 
     const [hover, setHover] = useState(false);
 
+    const PokemonCry = new Audio(pokemonDetails.cry);
+
     function onMouseEnter(){
+        // pokemonDetails.cry && PokemonCry.play();
         setHover(true);
     }
 
     function onMouseLeave(){
+        // pokemonDetails.cry && PokemonCry.pause();
         setHover(false);
     }
 
     function mobileHover(){
         setHover(!hover);
-    }
-
-    function viewPokemon(){
-        console.log(`view pokemon: ${pokemonDetails.name}`)
     }
 
     return (
@@ -70,7 +72,7 @@ export function ListViewCard({
                     <button 
                         className='view-more-button'
                         style={{backgroundColor: colors[theme]}}
-                        onClick={viewPokemon}
+                        onClick={() => viewPokemon(pokemonDetails)}
                     >
                         View Pokemon
                         <img

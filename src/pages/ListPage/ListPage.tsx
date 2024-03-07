@@ -1,10 +1,16 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { AppHeader, ListViewCard, PaginationRow } from '../../components';
+import { 
+    AppHeader, 
+    ListViewCard, 
+    PaginationRow, 
+    PokemonDetailsModal
+} from '../../components';
 import './ListPage.css';
 import { useContext, useState } from 'react';
 import { ThemeContext } from '../../theme/ThemeContext';
 import { useListDetails } from '../../hooks/useLListDetails';
 import { colors } from '../../theme/theme';
+import { PokemonDetailsInterface } from '../../hooks/useListItemDetails';
 
 export function ListPage() {
     const { searchTerm } = useParams();
@@ -12,6 +18,9 @@ export function ListPage() {
     const { theme } = useContext(ThemeContext);
 
     const [showThemeModal, setShowThemeModal] = useState(false);
+    const [showDetailsModal, setShowDetailsModal] = useState(false);
+    const [selectedPokemon, setSelectedPokemon] = useState<PokemonDetailsInterface>(
+        {} as PokemonDetailsInterface);
 
     const {
         searchValue,
@@ -26,10 +35,18 @@ export function ListPage() {
         changePageLimit,
     } = useListDetails(navigate, searchTerm);
 
-    const [tempHover, setTempHover] = useState(false);
+    function viewPokemon(pokemon: PokemonDetailsInterface){
+        setSelectedPokemon(pokemon);
+        setShowDetailsModal(true);
+    }
+
+    function closeDetailsModal(){
+        setShowDetailsModal(false);
+        setSelectedPokemon({} as PokemonDetailsInterface);
+    }
 
     return (
-        <div className='list-view-page'>
+        <div className='list-view-page' style={{overflowY: showDetailsModal? 'hidden' : 'scroll'}}>
             <AppHeader
                 theme={theme}
                 searchValue={searchValue}
@@ -37,7 +54,10 @@ export function ListPage() {
                 showThemeModal={showThemeModal}
                 setShowThemeModal={setShowThemeModal}
             />
-            <div className='list-page-content'>
+            <div className='list-page-content' style={{
+                position: showDetailsModal? 'fixed' : 'relative',
+                top: showDetailsModal? `-${window.scrollY}px` : 'auto',
+            }}>
                 <div className='list-card-container'>
                     {pokemonList.map((value, index) => 
                         <ListViewCard
@@ -45,6 +65,7 @@ export function ListPage() {
                             name={value.name}
                             url={value.url}
                             theme={theme}
+                            viewPokemon={viewPokemon}
                         />
                     )}
                 </div>
@@ -65,6 +86,12 @@ export function ListPage() {
                     theme={theme}
                 />
             </div>
+            {showDetailsModal &&
+                <PokemonDetailsModal
+                    pokemonDetails={selectedPokemon}
+                    closeModal={closeDetailsModal}
+                />
+            }
         </div>
     );
 }

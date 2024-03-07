@@ -89,6 +89,10 @@
     line-height: 22px;
 }
 
+.view-more-button:hover{
+    box-shadow: 1px 4px 4px rgba(0%, 0%, 0%, 0.4);
+}
+
 .view-more-icon{
     height: 20px;
     width: auto;

@@ -9,11 +9,12 @@ interface PokemonTypeInterface{
     }
 }
 
-interface PokemonDetailsInterface{
+export interface PokemonDetailsInterface{
     id: number;
     name: string;
     sprite: string;
     types: string[];
+    cry: string;
 }
 
 export function useListItemDetails(
@@ -40,6 +41,7 @@ export function useListItemDetails(
                 name: pokeApiResponseBody.name,
                 sprite: pokeApiResponseBody.sprites.other['dream_world'].front_default 
                     || pokeApiResponseBody.sprites.other['official-artwork'].front_default,
+                cry: pokeApiResponseBody.cries.latest || '',
                 types: pokemonTypes,
             };
             // console.log({tempDetails, pokeApiResponseBody});
@@ -54,13 +56,13 @@ export function useListItemDetails(
             const pokeApiResponseBody = await pokeApiResponse.json();
 
             const pokemonTypes = pokeApiResponseBody.results.map((result: any) => result.name);
-            // console.log('All pokemon types: ', pokemonTypes);
+            console.log('All pokemon types: ', pokemonTypes);
         }
     }
 
     useEffect(() => {
         getPokemonDetails().then(() => {});
-        getAllPokemonTypes().then(() => {});
+        // getAllPokemonTypes().then(() => {});
     },[]);
 
     return{

@@ -117,6 +117,10 @@
     background-color: white;
 }
 
+.pagination-button:hover{
+    box-shadow: 1px 4px 4px rgba(0%, 0%, 0%, 0.4);
+}
+
 .limit-dropdown-item:hover{
     background-color: #E1E1E1;
 }
