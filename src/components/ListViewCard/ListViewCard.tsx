@@ -18,23 +18,11 @@ export function ListViewCard({
 
     const [hover, setHover] = useState(false);
 
-    const PokemonCry = new Audio(pokemonDetails.cry);
-
-    function playAudio(){
-        PokemonCry.play();
-    }
-
-    function pauseAudio(){
-        PokemonCry.pause();
-    }
-
     function onMouseEnter(){
-        // playAudio();
         setHover(true);
     }
 
     function onMouseLeave(){
-        // pauseAudio();
         setHover(false);
     }
 

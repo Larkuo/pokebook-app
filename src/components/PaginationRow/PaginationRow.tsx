@@ -113,14 +113,14 @@ export function PaginationRow({
                 {showLimitDropdown &&
                     <div className='limit-dropdown-list'>
                         {LIMITS_DATA.map((limit) => limit !== pageLimit &&
-                            <div 
+                            <button 
                                 key={limit}
                                 className='limit-dropdown-item'
                                 onClick={() => {
                                     setShowLimitDropdown(false);
                                     changePageLimit(limit);
                                 }}
-                            >{limit}</div>
+                            >{limit}</button>
                         )}
                     </div>
                 }

@@ -13,7 +13,6 @@ interface PokemonDetailsInterface{
     id: number;
     name: string;
     sprite: string;
-    cry: string;
     types: string[];
 }
 
@@ -41,7 +40,6 @@ export function useListItemDetails(
                 name: pokeApiResponseBody.name,
                 sprite: pokeApiResponseBody.sprites.other['dream_world'].front_default 
                     || pokeApiResponseBody.sprites.other['official-artwork'].front_default,
-                cry: pokeApiResponseBody.cries.latest,
                 types: pokemonTypes,
             };
             // console.log({tempDetails, pokeApiResponseBody});
