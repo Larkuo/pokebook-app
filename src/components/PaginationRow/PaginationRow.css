@@ -154,8 +154,8 @@
     }
 
     .pagination-button{
-        width: 8vw;
-        height: 8vw;
+        width: 10vw;
+        height: 10vw;
     }
 
     .pagination-limit-dropdown{
@@ -163,13 +163,13 @@
     }
 
     .pagination-limit-container{
-        width: 15vw;
-        height: 8vw;
+        width: 20vw;
+        height: 10vw;
         margin-top: 2.5vh;
     }
 
     .limit-dropdown-list{
-        width: 20vw;
+        width: 25vw;
         height: 12vh;
         padding-top: 10%;
         padding-bottom: 10%;
@@ -177,7 +177,7 @@
 
     .limit-dropdown-item{
         background-color: #E1E1E1;
-        height: 6vw;
+        height: 5.5vw;
     }
 
     .pagination-row{
