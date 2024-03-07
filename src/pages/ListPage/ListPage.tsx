@@ -26,6 +26,8 @@ export function ListPage() {
         changePageLimit,
     } = useListDetails(navigate, searchTerm);
 
+    const [tempHover, setTempHover] = useState(false);
+
     return (
         <div className='list-view-page'>
             <AppHeader
