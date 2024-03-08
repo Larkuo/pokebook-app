@@ -246,4 +246,8 @@
     .details-modal-footer{
         padding-top: 2%;
     }
+
+    .tab-nav-container{
+        width: 90%;
+    }
 }
