@@ -26,7 +26,7 @@
 
 .details-modal-header{
     width: 95%;
-    height: 30%;
+    height: 33%;
     background: linear-gradient(180deg, #7FCAD1 0%, #3DA0A9 100%);
     border-radius: 15px;
     display: flex;
@@ -66,12 +66,12 @@
 .details-modal-sprite{
     width: 70%;
     max-height: 100%;
-    margin-top: 3.5%;
+    margin-top: 2.5%;
     align-self: center;
 }
 
 .details-modal-content{
-    height: 60%;
+    height: 57%;
     width: 95%;
     background-color: transparent;
     padding-top: 3%;
