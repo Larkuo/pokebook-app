@@ -131,15 +131,15 @@ export function useListItemDetails(
         setPokemonDetails(tempDetails);
     }
 
-    async function getAllPokemonTypes(){ // function to get all pokemon types to help create PokemonTypeStrings object with emojis
-        const pokeApiResponse = await fetch('https://pokeapi.co/api/v2/type/');                                                                     
-        if(pokeApiResponse && pokeApiResponse.ok && pokeApiResponse.status === 200){
-            const pokeApiResponseBody = await pokeApiResponse.json();
+    // async function getAllPokemonTypes(){ // function to get all pokemon types to help create PokemonTypeStrings object with emojis
+    //     const pokeApiResponse = await fetch('https://pokeapi.co/api/v2/type/');                                                                     
+    //     if(pokeApiResponse && pokeApiResponse.ok && pokeApiResponse.status === 200){
+    //         const pokeApiResponseBody = await pokeApiResponse.json();
 
-            const pokemonTypes = pokeApiResponseBody.results.map((result: any) => result.name);
-            console.log('All pokemon types: ', pokemonTypes);
-        }
-    }
+    //         const pokemonTypes = pokeApiResponseBody.results.map((result: any) => result.name);
+    //         console.log('All pokemon types: ', pokemonTypes);
+    //     }
+    // }
 
     useEffect(() => {
         getPokemonDetails().then(() => {});
