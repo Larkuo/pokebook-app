@@ -2,6 +2,7 @@ import { PokemonDetailsInterface } from '../../hooks/useListItemDetails';
 import ArrowLeftIcon from '../../assets/arrow-left.svg';
 import './PokemonDetailsModal.css';
 import { useState } from 'react';
+import { AboutTab, SimilarTab, StatsTab } from '..';
 
 type ModalTabType = 'about' | 'stats' | 'similar';
 
@@ -49,10 +50,21 @@ export function PokemonDetailsModal({
                             >{value}</div>
                         )}
                     </div>
-                    <div className='tab-content'>
+                    <div className='tab-content' style={{
+                        height: 
+                            currentTab === 'similar'? '70%' :
+                            currentTab === 'stats' || pokemonDetails.about.abilities.length > 2
+                            ? '67%' : '57%',
+                    }}>
                         <div className='tab-title-container'>
                             <h2 className='tab-title'>{currentTab}</h2>
                         </div>
+                        {currentTab === 'about'
+                             ? <AboutTab {...pokemonDetails.about} />
+                             : currentTab === 'stats'
+                             ? <StatsTab {...pokemonDetails.stats} />
+                             : <SimilarTab similarPokemon={pokemonDetails.similar}/>
+                        }
                     </div>
                 </div>
                 <div className='details-modal-footer'>

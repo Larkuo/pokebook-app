@@ -80,7 +80,7 @@ export function useListItemDetails(
             ).slice(0,2);
             // console.log({filteredList});
 
-            similarPokemon = filteredList;
+            similarPokemon = filteredList.map((currentPokemon: any) => currentPokemon.pokemon);
         }
 
         return similarPokemon;
@@ -118,7 +118,7 @@ export function useListItemDetails(
                 about: {
                     height: pokeApiResponseBody.height,
                     weight: pokeApiResponseBody.weight,
-                    abilities: pokeApiResponseBody.abilities.map((ability: any) => ability.name)
+                    abilities: pokeApiResponseBody.abilities.map((ability: any) => ability.ability.name)
                 },
                 stats: tempStats,
                 similar: similarPokemon,
