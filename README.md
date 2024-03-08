@@ -20,7 +20,7 @@ The app should be accessible via [http://localhost:5173](http://localhost:5173)
 
 ## Viewing the deployed app
 
-The app is currently not deployed. The readme would be updated once this changes.
+The app is deployed on vercel. View it here [https://pokebook-app-larkuo-wilson-tettehs-projects.vercel.app/](https://pokebook-app-larkuo-wilson-tettehs-projects.vercel.app/)
 
 
-Last README.md Update: `05 March 2024`
+Last README.md Update: `08 March 2024`
