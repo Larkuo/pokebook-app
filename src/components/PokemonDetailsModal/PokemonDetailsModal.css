@@ -83,6 +83,7 @@
 }
 
 .modal-pokemon-name{
+    font-family: 'ClashDisplay-Variable';
     font-size: 40px;
     font-weight: 600;
     line-height: 42px;
@@ -107,14 +108,15 @@
     padding-bottom: 4px;
     background-color: #EEEEEE; 
     border-radius: 20px; 
+    font-family: 'GeneralSans-Variable';
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
+    text-transform: capitalize;
 }
 
 .tab-content{
     width: 75%;
-    /* min-height: 45%; */
     margin-top: 3%;
     box-shadow: 
         0px 0px 0px 0px #E9E9E9, 
@@ -140,6 +142,7 @@
 }
 
 .tab-title{
+    font-family: 'ClashDisplay-Variable';
     font-size: 20px;
     font-weight: 600;
     line-height: 22px;
@@ -182,6 +185,7 @@
     text-align: center;
     border-radius: 50px;
     height: 70%;
+    font-family: 'GeneralSans-Variable';
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
