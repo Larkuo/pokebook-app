@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import './PokemonDetailsTab.css';
 import { ThemeContext } from '../../theme/ThemeContext';
 import { colors } from '../../theme/theme';

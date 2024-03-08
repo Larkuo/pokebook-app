@@ -5,7 +5,7 @@ import { APP_ROUTES, AppRoutesInterface } from "./AppRoutes";
 function AppNavigation(){
     return(
         <Routes>
-            {APP_ROUTES.map((route: AppRoutesInterface, index: number) => 
+            {APP_ROUTES.map((route: AppRoutesInterface) => 
                 <Route {...route} />
             )}
         </Routes>
